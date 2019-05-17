@@ -1,10 +1,51 @@
 general:
-node index.js run from inside server folder will start the express server
+npm start   ----   changed to this in script from: node index.js run from inside server folder will start the express server
+early heroku deployment - I like this so far
+I never knew when you could/should deploy, but this guy is doing it as soon as express is set up
+     I like this because it feels like solid footing, somthing to stand on, an answer to a question
 
 
 
 
 
+heroku notes:
+heroku dictates which ports your app needs to listen to
+I don't recall what the following does, but for some reason
+we need to use a specific verson of npm and node? seems odd
+"engines": {
+    "node": "8.1.1",
+    "npm": "5.0.3"
+  },
+
+  Logging in... done
+Logged in as beckaaronr@gmail.com
+Aarons-MacBook-Air:server aaronrbeck$ heroku create
+Creating app... done, ⬢ serene-hollows-22376
+https://serene-hollows-22376.herokuapp.com/ | https://git.heroku.com/serene-hollows-22376.git
+serene-hollows-22376                                    indentifies name of your app to heroku        
+https://serene-hollows-22376.herokuapp.com/             where we send visitors
+https://git.heroku.com/serene-hollows-22376.git         deployment target a git repository that we can push our local code base to
+
+heroku open     will open your projct
+
+once you add a folder or file to git, it should be "greyed out"
+
+
+
+
+
+
+google oauth notes:
+passport has at least 2 libraries:
+
+- passport : general helpers
+- passport strategy: helps for authenticating one specific method
+
+
+
+
+
+Lesson 25 - set up app.get in index.js
 
 
 
@@ -15,10 +56,23 @@ where I'm stuck:
 
 
 
-
 how I got unstuck:
 
 
+lesson 25- spelling error
+  tried to start server at 5000 by running node index.js
+  I got this: passport.use(new GoogleStrategy({
+              ^
+
+  TypeError: GoogleStrategy is not a constructor
+  over at index.js I'm told:
+  Could not find a declaration file for module 'passport-google-oauth20
+  so I never npm installed google oauth 2.0?
+  I went back and re-watched lesson 19
+  so I went back and npm install --save passport-google-oauth20 and still no love.
+  I checked spelling on passport import statements - no love there either
+  Ok, I think i found the problem: it was a misspelling.  I changed my incorrect require('passport-google-oauth20').Strategy20
+  to require('passport-google-oauth20').Strategy
 
 
 
