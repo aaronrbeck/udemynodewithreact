@@ -54,9 +54,6 @@ where I'm stuck:
 
 
 
-
-
-
 how I got unstuck:
 
 
@@ -74,6 +71,18 @@ lesson 25- spelling error
   I checked spelling on passport import statements - no love there either
   Ok, I think i found the problem: it was a misspelling.  I changed my incorrect require('passport-google-oauth20').Strategy20
   to require('passport-google-oauth20').Strategy
+
+lesson 26/27  - re-did things 3 times
+
+  so I created credentials with http://localhost:5000 and http://localhost:5000/auth/google/callback in the apporpriate input boxes
+  I've added clientID and client secret to keys.js, 
+  then ran node index.js, then navigate to localhost:5000/auth/google in browser
+  I'm still landing on the Error: redirect_uri_mismatchm, following the console link does actually take me back to the correct developer console
+  that was not the case only moments ago.  I will give google 5 minutes to get things in their system.  fingers crossed
+  I'm in.  not sure why/how, but oh, well
+
+lesson 27: - got user token to console.log in termianl
+
 
 
 
