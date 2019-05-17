@@ -46,6 +46,7 @@ passport has at least 2 libraries:
 
 
 Lesson 25 - set up app.get in index.js
+lesson 26 - fix the google redirect error by providing a valid redirect url
 
 
 
