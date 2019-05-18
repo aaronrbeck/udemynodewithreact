@@ -47,7 +47,8 @@ passport has at least 2 libraries:
 
 Lesson 25 - set up app.get in index.js
 lesson 26 - fix the google redirect error by providing a valid redirect url
-
+lesson 27 - got user token to console.log in termianl
+lesson 28 - after our user comes back with a valid token after granting us passport access we can now save them to our database
 
 
 where I'm stuck:
@@ -81,7 +82,6 @@ lesson 26/27  - re-did things 3 times
   that was not the case only moments ago.  I will give google 5 minutes to get things in their system.  fingers crossed
   I'm in.  not sure why/how, but oh, well
 
-lesson 27: - got user token to console.log in termianl
 
 
 
