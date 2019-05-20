@@ -6,8 +6,22 @@ const keys = require('../config/keys')
 
 const User = mongoose.model('users')
 
+
+//turns a mongoose model instance into an id
+//user.id is the token that gets stuffed into the cookie
+//
 passport.serializeUser((user, done)=>{
     done(null, user.id);
+})
+
+
+//now we will turn an id back into a mongoose model instance
+passport.deserializeUser((id, done)=>{
+    User.findById(id)
+    .then(user => {
+        done(null, user);
+
+    })
 })
 
 
