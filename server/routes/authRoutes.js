@@ -16,4 +16,11 @@ module.exports = (app) =>{
     )
     //lesson 27 after user grants the passport request with the token they grabbed from google we authenticate with that token
     app.get('/auth/google/callback', passport.authenticate('google'))
+
+//lesson 45
+app.get('/api/current_user', (req, res) => {
+    res.send(req.user);
+})
+
 }
+

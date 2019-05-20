@@ -69,7 +69,8 @@ lesson 41 - added "done" to our callback statement in passport.js
   added app.use(cookieSession({})) in index.js
   added keys to keys.js for our cookie session
 
-45
+45 - added app.get('/api/current_user', (req, res) to authRoutes.js
+
 
 
 
