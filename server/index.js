@@ -5,8 +5,11 @@
 //on the server side of things we will use common module
 //import syntax:
 const express = require('express');
+const mongoose = require('mongoose')
+const keys = require('./config/keys')
 require('./services/passport');
 
+mongoose.connect(keys.mongoURI)
 
 //inside a single node project we may have several different express
 //applications, the following app object is used to set up configuration that will 

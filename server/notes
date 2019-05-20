@@ -50,6 +50,13 @@ lesson 26 - fix the google redirect error by providing a valid redirect url
 lesson 27 - got user token to console.log in termianl
 lesson 28 - after our user comes back with a valid token after granting us passport access we can now save them to our database
 lesson 29 - added nodemon
+lesson 30 - server structure refactor
+lesson 31 - theory of authentication lecture
+lesson 32 - signing in users with oauth lecture
+lesson 33 - mongo lecture
+lesson 34 - setup mongoatlas cluster added mongo cluster info to keys.js
+lesson 35 - mlab setup info - I skipped this as mLab does not exist
+lesson 36 - npm install mongoose
 
 
 
