@@ -82,6 +82,10 @@ lesson 41 - added "done" to our callback statement in passport.js
 50 - setting up production credentials for google oauth
 51 - finding heroku redirect url for google oauth credentials
 52 - changed keys and added prod.js propbably need to watch this again
+53 - modified config values over at heroku
+
+
+
 
 where I'm stuck:
 
