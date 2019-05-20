@@ -62,6 +62,17 @@ lesson 38 - added User.js and a mongoose schema to users.js and created a mongo 
 lesson 39 - a lot of explaination, might be worth a re-watch, save a new record to mongodb
 lesson 40 - modified callback in passport js to prevent duplicate users from being created in mongodb
 lesson 41 - added "done" to our callback statement in passport.js
+42 - added .serializeUser to passport.js
+43 - added .deserializeUser to passport.js
+44 - tell passport to use cookies, added cookie-session because express does not know how to handle cookies
+  required cookie-session as well as passport on import statements in index.js
+  added app.use(cookieSession({})) in index.js
+  added keys to keys.js for our cookie session
+
+45
+
+
+
 
 
 where I'm stuck:
