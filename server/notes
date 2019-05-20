@@ -59,7 +59,7 @@ lesson 35 - mlab setup info - I skipped this as mLab does not exist
 lesson 36 - npm install mongoose
 lesson 37 - mongo lecture
 lesson 38 - added User.js and a mongoose schema to users.js and created a mongo model class
-
+lesson 39 - a lot of explaination, might be worth a re-watch, save a new record to mongodb
 
 
 
@@ -87,6 +87,7 @@ lesson 25- spelling error
 
 lesson 26/27  - re-did things 3 times
 
+
   so I created credentials with http://localhost:5000 and http://localhost:5000/auth/google/callback in the apporpriate input boxes
   I've added clientID and client secret to keys.js, 
   then ran node index.js, then navigate to localhost:5000/auth/google in browser
@@ -94,8 +95,13 @@ lesson 26/27  - re-did things 3 times
   that was not the case only moments ago.  I will give google 5 minutes to get things in their system.  fingers crossed
   I'm in.  not sure why/how, but oh, well
 
+lesson 39 - import order of operations
+  This was actually something that the instructor walkec
+  us through, but still something good to remember - 
+  if server crashes or does not start it may be due to 
+  over of operations of require statements
 
-
+lesson 
 
 
 
