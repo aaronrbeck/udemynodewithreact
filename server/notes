@@ -70,7 +70,8 @@ lesson 41 - added "done" to our callback statement in passport.js
   added keys to keys.js for our cookie session
 
 45 - added app.get('/api/current_user', (req, res) to authRoutes.js
-
+46 - added app.get('/api/logout', (req, res) to authRoutes.js
+47 -
 
 
 
