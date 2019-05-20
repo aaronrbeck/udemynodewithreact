@@ -77,9 +77,11 @@ lesson 41 - added "done" to our callback statement in passport.js
   for this project since all we are storing is id in the cookie, cookie-session works and is 
   way more simple as express session requires some "store" decisions to be made
   we can use inspector / network to view how cookies get used
-
-
-
+48 - lecture on why we should have seperate dev keys&db and prod keys&db
+49 - 
+50 - setting up production credentials for google oauth
+51 - finding heroku redirect url for google oauth credentials
+52 - changed keys and added prod.js propbably need to watch this again
 
 where I'm stuck:
 
