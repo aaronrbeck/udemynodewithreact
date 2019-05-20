@@ -5,28 +5,40 @@ I never knew when you could/should deploy, but this guy is doing it as soon as e
      I like this because it feels like solid footing, somthing to stand on, an answer to a question
 
 
-
+both parent and child folders are git initialized.  not sure if this might come back to bite me at some point
+I was primarially using the parent folder to track to github
+the server folder has it's own git file - this one is the one that I can use to automatically depoloy to heroku
+by using git push heroku master
 
 
 heroku notes:
-heroku dictates which ports your app needs to listen to
-I don't recall what the following does, but for some reason
-we need to use a specific verson of npm and node? seems odd
-"engines": {
-    "node": "8.1.1",
-    "npm": "5.0.3"
-  },
+  deployed project: https://serene-hollows-22376.herokuapp.com
+  heroku dictates which ports your app needs to listen to
+  I don't recall what the following does, but for some reason
+  we need to use a specific verson of npm and node? seems odd
+  "engines": {
+      "node": "8.1.1",
+      "npm": "5.0.3"
+    },
 
-  Logging in... done
-Logged in as beckaaronr@gmail.com
-Aarons-MacBook-Air:server aaronrbeck$ heroku create
-Creating app... done, ⬢ serene-hollows-22376
-https://serene-hollows-22376.herokuapp.com/ | https://git.heroku.com/serene-hollows-22376.git
-serene-hollows-22376                                    indentifies name of your app to heroku        
-https://serene-hollows-22376.herokuapp.com/             where we send visitors
-https://git.heroku.com/serene-hollows-22376.git         deployment target a git repository that we can push our local code base to
+    Logging in... done
+  Logged in as beckaaronr@gmail.com
+  Aarons-MacBook-Air:server aaronrbeck$ heroku create
+  Creating app... done, ⬢ serene-hollows-22376
+  https://serene-hollows-22376.herokuapp.com/ | https://git.heroku.com/serene-hollows-22376.git
+  serene-hollows-22376                                    indentifies name of your app to heroku        
+  https://serene-hollows-22376.herokuapp.com/             where we send visitors
+  https://git.heroku.com/serene-hollows-22376.git         deployment target a git repository that we can push our local code base to
 
-heroku open     will open your projct
+  heroku open     will open your projct in a browser window
+  if browser does not deploy heroku project view logs with
+  heroku logs
+
+
+
+
+
+
 
 once you add a folder or file to git, it should be "greyed out"
 
@@ -83,11 +95,27 @@ lesson 41 - added "done" to our callback statement in passport.js
 51 - finding heroku redirect url for google oauth credentials
 52 - changed keys and added prod.js propbably need to watch this again
 53 - modified config values over at heroku
+54 - supposed to have deployed via heroku, but the heroku version is not starting/running properly.
 
 
-
+55 - create-react-app client inside servrer folder
+56 - I never knew before that create-react-app creates it's own server.  i guess I knew as much
+  but I guess I never really thought about it in those explicit terms.  but, duh, npm start then localhost3000 spins up, duh.
+  added hi from app
+57 - added client script to our serverr package.json to run the react servre starter
+    added dev script and installed concurrently dependancy
 
 where I'm stuck:
+ 53 - I tried doing a git push heroku master as the instructor did and
+ i got the following message: 
+ Aarons-MacBook-Air:udemynodewithreact aaronrbeck$ git push heroku master
+fatal: 'heroku' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+so I guess I need to go back to where we set up heroku and understand how git is connected to heroku for this project
 
 
 

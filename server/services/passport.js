@@ -30,7 +30,9 @@ passport.deserializeUser((id, done)=>{
 passport.use(new GoogleStrategy({
     clientID: keys.googleClientID,
     clientSecret: keys.googleClientSecret,
-    callbackURL: '/auth/google/callback'
+    callbackURL: '/auth/google/callback',
+    //let passport know that we are ok with heroku as a proxy server during the oauth process:
+    proxy: true
 },
     (accessToken, refreshToken, profile, done) => {
        User.findOne({ googleId: profile.id })
