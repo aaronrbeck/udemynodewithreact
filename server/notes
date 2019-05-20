@@ -71,8 +71,12 @@ lesson 41 - added "done" to our callback statement in passport.js
 
 45 - added app.get('/api/current_user', (req, res) to authRoutes.js
 46 - added app.get('/api/logout', (req, res) to authRoutes.js
-47 -
-
+47 - lecture on difference between cookie sessions and epress session modules
+  cookie-session info is store in the actual cookie - about 4kb max
+  express session module stores a reference in the cookie, which allows you to store way more info in an off-site db storage apporpriate
+  for this project since all we are storing is id in the cookie, cookie-session works and is 
+  way more simple as express session requires some "store" decisions to be made
+  we can use inspector / network to view how cookies get used
 
 
 

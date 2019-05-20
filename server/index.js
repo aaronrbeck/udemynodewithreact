@@ -6,6 +6,10 @@
 //import syntax:
 const express = require('express');
 const mongoose = require('mongoose')
+
+//we are using cookie-session for this project, but because
+//cookies can only store about 4kb of info, so for future projects
+//if you need to store more info consider using the express session module found on npm
 const cookieSession = require('cookie-session')
 const passport = require('passport')
 const keys = require('./config/keys')
@@ -22,6 +26,10 @@ mongoose.connect(keys.mongoURI)
 //on why express is stuffed into the app object
 //I guess it allows us to make multiple objects with express inside them?
 const app = express();
+
+
+//the following app.use calls are considered middleware
+
 
 app.use(
         cookieSession({
