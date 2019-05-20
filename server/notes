@@ -57,7 +57,8 @@ lesson 33 - mongo lecture
 lesson 34 - setup mongoatlas cluster added mongo cluster info to keys.js
 lesson 35 - mlab setup info - I skipped this as mLab does not exist
 lesson 36 - npm install mongoose
-
+lesson 37 - mongo lecture
+lesson 38 - added User.js and a mongoose schema to users.js and created a mongo model class
 
 
 
