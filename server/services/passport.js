@@ -34,20 +34,15 @@ passport.use(new GoogleStrategy({
     //let passport know that we are ok with heroku as a proxy server during the oauth process:
     proxy: true
 },
-    (accessToken, refreshToken, profile, done) => {
-       User.findOne({ googleId: profile.id })
-       .then((existingUser)=>{
+    async (accessToken, refreshToken, profile, done) => {
+       const existingUser = await User.findOne({ googleId: profile.id })
            if(existingUser){
-//we already have a record with the given profile ID
-            done(null, existingUser)
-            }else{
-               //we don't have a user record with this Id, make a new record
-               new User({ googleId: profile.id })
-               .save()
-               .then(user => done(null, user))
-
+            return done(null, existingUser)
             }
-       })
+               const user = await new User({ googleId: profile.id }).save()
+                done(null, user)
+
+            
     }
 )
 );

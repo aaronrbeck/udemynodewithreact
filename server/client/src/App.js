@@ -20,6 +20,8 @@ function App() {
           Learn React
         </a>
       </header>
+      {/* link to our oauth flow: */}
+      <a href="http://localhost:5000/auth/google">Sign in with Google</a>
     </div>
   );
 }

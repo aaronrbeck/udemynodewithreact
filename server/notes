@@ -10,7 +10,8 @@ I was primarially using the parent folder to track to github
 the server folder has it's own git file - this one is the one that I can use to automatically depoloy to heroku
 by using git push heroku master
 
-
+--In production the create-react-app server does not exist
+--the proxy file inside the react app rewrites requests from 3000 to 5000
 heroku notes:
   deployed project: https://serene-hollows-22376.herokuapp.com
   heroku dictates which ports your app needs to listen to
@@ -104,18 +105,20 @@ lesson 41 - added "done" to our callback statement in passport.js
   added hi from app
 57 - added client script to our serverr package.json to run the react servre starter
     added dev script and installed concurrently dependancy
+58 - written update addressing proxy errors with create react app 2 and 3.0
+59 - added proxy in the client packagejson which somehow helps direct the auth flow no matter whether we are in dev mode or prod mode
+60 - added
+61 - architecture theory lecture
+62 - some refactoring theory/lecture.  best explaination I've seen on async await - this was the shit I tried to pay 10k to get and didn't get.  so pissed so often
+63 - refactored passport.js to async/await
+
+
+
+
+
 
 where I'm stuck:
- 53 - I tried doing a git push heroku master as the instructor did and
- i got the following message: 
- Aarons-MacBook-Air:udemynodewithreact aaronrbeck$ git push heroku master
-fatal: 'heroku' does not appear to be a git repository
-fatal: Could not read from remote repository.
 
-Please make sure you have the correct access rights
-and the repository exists.
-
-so I guess I need to go back to where we set up heroku and understand how git is connected to heroku for this project
 
 
 
@@ -153,7 +156,45 @@ lesson 39 - import order of operations
   if server crashes or does not start it may be due to 
   over of operations of require statements
 
-lesson 
+ 
 
 
+53 - went back and reviewed earlier lessons and realized that I have 2 git initialized folders, the parent folder and the server folder
+      the server folder was what the instructur had connected to heroku auto deployments
+  i got the following message: 
+  Aarons-MacBook-Air:udemynodewithreact aaronrbeck$ git push heroku master
+  fatal: 'heroku' does not appear to be a git repository
+  fatal: Could not read from remote repository.
+
+  Please make sure you have the correct access rights
+  and the repository exists.
+
+  so I guess I need to go back to where we set up heroku and understand how git is connected to heroku for this project
+
+alsk
+
+59/60 ish: - with some research I decided to revert to a prior babel version.
+            so far problem seems solved via
+             https://github.com/creativetimofficial/ct-material-dashboard-pro-react/issues/62
+
+
+
+      I ran:  npm install --save-exact @babel/runtime@7.0.0-beta.55
+
+
+    the dual server deployment workflow is messed up.
+    I need a break.  brain hurts. go back and check lesson 58.
+    I'm confused as to how the proxy file works and whether we need to pull the 
+    proxy statments out of the client packagejson
+    when I run npm run dev the server side server starts at 5000, but react does not start at 3000
+    and I get an error pointing towards babel: 
+    Failed to compile.
+    [1] 
+    [1] ./node_modules/react-dev-utils/formatWebpackMessages.js
+    [1] Module not found: Can't resolve '/Users/aaronrbeck/Documents/Assignments/sandbox/udemynodewithreact/server/client/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/slicedToArray' in '/Users/aaronrbeck/Documents/Assignments/sandbox/udemynodewithreact/server/client/node_modules/react-dev-utils'
+    [1] Compiling...
+    [1] Failed to compile.
+    [1] 
+    [1] ./node_modules/react-dev-utils/formatWebpackMessages.js
+    [1] Module not found: Can't resolve '/Users/aaronrbeck/Documents/Assignments/sandbox/udemynodewithreact/server/client/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/slicedToArray' in '/Users/aaronrbeck/Documents/Assignments/sandbox/udemynodewithreact/server/client/node_modules/react-dev-utils'
 
