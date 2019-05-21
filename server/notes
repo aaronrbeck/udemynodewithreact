@@ -119,7 +119,8 @@ lesson 41 - added "done" to our callback statement in passport.js
       app.js is react router stuff
       added dependancies in client directory:npm install --save redux react-redux react-routher-dom
 66 - re-wrote index and app.js files, terminal says things compiled
-
+67 - instructor had an error related to his version of npm, he removed his json.lock file and installed a new one
+68 - 
 
 where I'm stuck:
 
