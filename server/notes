@@ -151,7 +151,7 @@ lesson 41 - added "done" to our callback statement in passport.js
 82 - refactor the app.js file from functional to class component
       because we want to place the action creator inside the app component because multiple components willl need to know when the user is logged in, not just the nav bar
 83 - testing fetch user - this would be worth re-watching after you better understand redux
-84 -
+84 - refactor to async await syntax - i need more experience with refactoring - couldn't do this on my own
 85 -
 86 -
 87 -
