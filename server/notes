@@ -111,10 +111,14 @@ lesson 41 - added "done" to our callback statement in passport.js
 61 - architecture theory lecture
 62 - some refactoring theory/lecture.  best explaination I've seen on async await - this was the shit I tried to pay 10k to get and didn't get.  so pissed so often
 63 - refactored passport.js to async/await
-
-
-
-
+64 - finish a back end segment, then add corresponding front end, but don't do at the same time or you will end up with spaghetti code
+  review of front end plan
+65 - redux stuff
+      instructor deleted all but registerServiceWorker.js in his src folder - I didn't do that yet. 
+      index.js is the redux layer
+      app.js is react router stuff
+      added dependancies in client directory:npm install --save redux react-redux react-routher-dom
+66 - re-wrote index and app.js files, terminal says things compiled
 
 
 where I'm stuck:
