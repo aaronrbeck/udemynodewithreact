@@ -148,7 +148,8 @@ lesson 41 - added "done" to our callback statement in passport.js
     refactored fetchUser inside src/index.js to use redux thunk
     yea, I don't understand redux - need to do some reading/learning
 
-82 -
+82 - refactor the app.js file from functional to class component
+      because we want to place the action creator inside the app component because multiple components willl need to know when the user is logged in, not just the nav bar
 83 -
 84 -
 85 -
