@@ -135,10 +135,19 @@ lesson 41 - added "done" to our callback statement in passport.js
     materialize takes advantage of 'webpacks' that come with react
     webpack allows us to npm install css libraries such as materialize library
     import materialize-css/dist/css/materialize.min.css to main index.js
-78 - 
-79 - 
-80 -
-81 -
+78 - applied header styling
+79 - lecture: materialize requires one root container
+    how do we figure out if user is logged in?
+80 - SOME PROXY MODIFICATIONS - I DON'T THINK I NEED THEM?
+      installed redux thunk(helps async requests behave) and axios(helps with ajax requests) libraries
+      at some point you need to do some reading about redux (or not, just learn hooks) action creators
+
+
+81 - wrote action creator using redux thunk and axios
+    redux thunk give us direct access allowing us to manually dispatch the dispactch function
+    refactored fetchUser inside src/index.js to use redux thunk
+    yea, I don't understand redux - need to do some reading/learning
+
 82 -
 83 -
 84 -
