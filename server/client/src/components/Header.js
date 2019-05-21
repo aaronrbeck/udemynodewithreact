@@ -1,6 +1,19 @@
 import React, { Component } from 'react'
+//hook up header to redux-store
+import { connect } from 'react-redux'
 
 class Header extends Component {
+    renderContent(){
+        switch(this.props.auth){
+            case null:
+                return 'still deciding'
+            case false:
+                return 'im loggedout'
+            default:
+                return 'im loggedin'
+        }
+    }
+
     render(){
         return(
             <nav>
@@ -9,13 +22,19 @@ class Header extends Component {
                 Emaily
                 </a>
                 <ul className="right">
-                    <li>
-                        <a>Login with Google</a>
-                    </li>
+
+                {this.renderContent()}
+
+
+
                 </ul>
                 </div>
             </nav>
         )
     }
 }
-export default Header
+    function mapStateToProps({ auth }){
+        return { auth }
+    
+}
+export default connect(mapStateToProps)(Header)
