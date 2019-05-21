@@ -152,7 +152,8 @@ lesson 41 - added "done" to our callback statement in passport.js
       because we want to place the action creator inside the app component because multiple components willl need to know when the user is logged in, not just the nav bar
 83 - testing fetch user - this would be worth re-watching after you better understand redux
 84 - refactor to async await syntax - i need more experience with refactoring - couldn't do this on my own
-85 -
+85 - changed authReducer's initials state to null and FETCH_USER  state as action.payload || false
+    changed payload from res to res.data because we don't care about seeing other payloads like headers in the console.log
 86 -
 87 -
 88 -
