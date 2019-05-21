@@ -161,7 +161,7 @@ lesson 41 - added "done" to our callback statement in passport.js
     we went with a full page refresh, ajax route would be faster for user
 90 - created landing component and imported to app.js
 
-91 -
+91 - finished header: home link directs to /surveys or / depending on login status
 
 
 
