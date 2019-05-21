@@ -157,7 +157,8 @@ lesson 41 - added "done" to our callback statement in passport.js
 86 - added render content function to header.js so that we can display different logged in status on header
 87 - added switch statment to header renderContent for sign in flow
 88 - added another route handler to authRouits for after sign in redirect
-89 -
+89 - logout philosophy and changed authRout for a redirect logout to /
+    we went with a full page refresh, ajax route would be faster for user
 90 -
 91 -
 

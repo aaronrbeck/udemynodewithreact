@@ -31,7 +31,8 @@ module.exports = (app) =>{
     //req.whatever - whatever is available via passport    
     app.get('/api/logout', (req, res) =>{
             req.logout();
-            res.send(req.user);
+            //lesson 89, fix logout redirect:
+            res.redirect('/');
         })
 
 
