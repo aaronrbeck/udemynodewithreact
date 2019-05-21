@@ -130,8 +130,11 @@ lesson 41 - added "done" to our callback statement in passport.js
 73 - 
 74 - initial route setup - exact route for /
 75 - finish initial route setup
-76 - 
-77 - 
+76 - added materialize dependancy
+77 - hooking up materialize parts
+    materialize takes advantage of 'webpacks' that come with react
+    webpack allows us to npm install css libraries such as materialize library
+    import materialize-css/dist/css/materialize.min.css to main index.js
 78 - 
 79 - 
 80 -
