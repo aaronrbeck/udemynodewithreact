@@ -156,7 +156,7 @@ lesson 41 - added "done" to our callback statement in passport.js
     changed payload from res to res.data because we don't care about seeing other payloads like headers in the console.log
 86 - added render content function to header.js so that we can display different logged in status on header
 87 - added switch statment to header renderContent for sign in flow
-88 -
+88 - added another route handler to authRouits for after sign in redirect
 89 -
 90 -
 91 -

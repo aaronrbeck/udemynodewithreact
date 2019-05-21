@@ -15,7 +15,14 @@ module.exports = (app) =>{
         })
     )
     //lesson 27 after user grants the passport request with the token they grabbed from google we authenticate with that token
-    app.get('/auth/google/callback', passport.authenticate('google'))
+    app.get(
+        '/auth/google/callback',
+        passport.authenticate('google'),
+        //lesson 88 fix post login redirect
+        (req, res) =>{
+            res.redirect('/surveys')
+        }
+        )
 
 
 
