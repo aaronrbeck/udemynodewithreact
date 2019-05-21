@@ -123,6 +123,35 @@ lesson 41 - added "done" to our callback statement in passport.js
 66 - re-wrote index and app.js files, terminal says things compiled
 67 - instructor had an error related to his version of npm, he removed his json.lock file and installed a new one
 68 - importer provider tag and setup some redux info
+69 - added authReducer file
+70 - imported authReducer to main react index.js
+71 -
+72 - 
+73 - 
+74 - 
+75 - 
+76 - 
+77 - 
+78 - 
+79 - 
+80 -
+81 -
+82 -
+83 -
+84 -
+85 -
+86 -
+87 -
+88 -
+89 -
+90 -
+91 -
+
+
+
+
+
+
 
 where I'm stuck:
 
