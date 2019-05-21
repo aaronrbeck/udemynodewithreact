@@ -109,21 +109,22 @@ lesson 41 - added "done" to our callback statement in passport.js
 59 - added proxy in the client packagejson which somehow helps direct the auth flow no matter whether we are in dev mode or prod mode
 60 - added
 61 - architecture theory lecture
+
+
 62 - some refactoring theory/lecture.  best explaination I've seen on async await - this was the shit I tried to pay 10k to get and didn't get.  so pissed so often
 63 - refactored passport.js to async/await
 64 - finish a back end segment, then add corresponding front end, but don't do at the same time or you will end up with spaghetti code
   review of front end plan
-65 - redux stuff
+65 - redux dependancies added
       instructor deleted all but registerServiceWorker.js in his src folder - I didn't do that yet. 
       index.js is the redux layer
       app.js is react router stuff
       added dependancies in client directory:npm install --save redux react-redux react-routher-dom
 66 - re-wrote index and app.js files, terminal says things compiled
 67 - instructor had an error related to his version of npm, he removed his json.lock file and installed a new one
-68 - 
+68 - importer provider tag and setup some redux info
 
 where I'm stuck:
-
 
 
 
@@ -203,3 +204,10 @@ alsk
     [1] ./node_modules/react-dev-utils/formatWebpackMessages.js
     [1] Module not found: Can't resolve '/Users/aaronrbeck/Documents/Assignments/sandbox/udemynodewithreact/server/client/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/slicedToArray' in '/Users/aaronrbeck/Documents/Assignments/sandbox/udemynodewithreact/server/client/node_modules/react-dev-utils'
 
+68 - changing url fixed
+    for some reason when I ran npm run dev both servers started, react compiled, but I was getting a bad token error
+      turns out that react was trying to start on an old login token, so I changed to 3000/auth/google and went through the 
+      outh flow without a problem
+
+
+lesson
