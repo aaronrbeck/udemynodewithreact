@@ -128,8 +128,8 @@ lesson 41 - added "done" to our callback statement in passport.js
 71 - react page component layout discussion
 72 - initial react router setup
 73 - 
-74 - 
-75 - 
+74 - initial route setup - exact route for /
+75 - finish initial route setup
 76 - 
 77 - 
 78 - 
