@@ -150,7 +150,7 @@ lesson 41 - added "done" to our callback statement in passport.js
 
 82 - refactor the app.js file from functional to class component
       because we want to place the action creator inside the app component because multiple components willl need to know when the user is logged in, not just the nav bar
-83 -
+83 - testing fetch user - this would be worth re-watching after you better understand redux
 84 -
 85 -
 86 -
@@ -252,4 +252,11 @@ alsk
       outh flow without a problem
 
 
-lesson
+83 - axios payload object was not showing up in console 
+    solved via q/a forums in src/index.js needed to change 
+  const store = createStore(()=>[]), {}, applyMiddleware(reduxThunk))
+
+    to const store = createStore(reducers, {}, applyMiddleware(reduxThunk))
+
+
+8
