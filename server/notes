@@ -110,7 +110,7 @@ lesson 41 - added "done" to our callback statement in passport.js
 60 - added
 61 - architecture theory lecture
 
-
+section 7 - Developing the client side
 62 - some refactoring theory/lecture.  best explaination I've seen on async await - this was the shit I tried to pay 10k to get and didn't get.  so pissed so often
 63 - refactored passport.js to async/await
 64 - finish a back end segment, then add corresponding front end, but don't do at the same time or you will end up with spaghetti code
@@ -160,11 +160,46 @@ lesson 41 - added "done" to our callback statement in passport.js
 89 - logout philosophy and changed authRout for a redirect logout to /
     we went with a full page refresh, ajax route would be faster for user
 90 - created landing component and imported to app.js
-
 91 - finished header: home link directs to /surveys or / depending on login status
 
+Section 8: Handling Payments
+92 - lecture, app overview, billing introduction
+93 - lecture, billing; add credit overview, instructor billing best practices
+      the collective we are bad a securtiy
+      #1 never accept raw credit card numbers
+      #2 never store cc numbers 
+      #3 always use outside payment processor
+        we will use strip
+
+      Billing is hard   
+      * is it possible to avoid monthly payments/multiple plans?
+      * fraud and chargebacks are a pain
 
 
+94 - stripe lecture and initial setup
+  secret key will go in backend keys file
+  publishable key will go in front end
+  stripe checkout; checkout.js - react is slightly different than other front end frameworks
+  install react-stripe-checkout 
+
+95 - strip api keys
+  
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
 
 
 
