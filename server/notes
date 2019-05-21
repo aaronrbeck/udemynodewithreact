@@ -125,8 +125,8 @@ lesson 41 - added "done" to our callback statement in passport.js
 68 - importer provider tag and setup some redux info
 69 - added authReducer file
 70 - imported authReducer to main react index.js
-71 -
-72 - 
+71 - react page component layout discussion
+72 - initial react router setup
 73 - 
 74 - 
 75 - 
