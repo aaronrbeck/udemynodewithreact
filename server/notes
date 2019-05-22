@@ -181,7 +181,6 @@ Section 8: Handling Payments
   publishable key will go in front end
   stripe checkout; checkout.js - react is slightly different than other front end frameworks
   install react-stripe-checkout 
-
 95 - strip api keys
   keys put on server side: dev, prod, heroku
   keys placed on front end
@@ -189,14 +188,13 @@ Section 8: Handling Payments
 
 96 - react key processor
     define strip key as environment variable
-
 97 - added .env.development and .env.production and added them to git ignore
 98 - react stripe checkout component
       stripe checout with three required parameters
 
 99  -stripe tokens - added payment button to header component
 100 - resolved key warning from console, customized stripe payment properties, changed stripe button styling
-101
+101 - wrote action creator in src/actions/index.js for when tokens are added
 102
 103
 104
