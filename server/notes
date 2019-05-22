@@ -203,7 +203,7 @@ Section 8: Handling Payments
 105 - bring in secretStripeKey into billingRoutes
     express does not parse post payloads, so we added body-parser middleware
     
-106 - 
+106 - changed billingRoutes.js to handle stripe.charges on the back end
 107
 108
 109
