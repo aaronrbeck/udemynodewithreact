@@ -243,7 +243,7 @@ section 10 mongoose for survey creation
 125 - create surveyRoutes.js handler, 
 126 - create middleware to check if user has enough credits to make a survey
 127 - started setting up a new survey instance in surveyRoutes.js
-128
+128 - fished creating survey property
 129
 130
 131

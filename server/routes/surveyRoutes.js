@@ -15,11 +15,17 @@ module.exports = app =>{
         const {title, subject, body, recipients } = req.body
         //more common in real world to do back end design before front end design
 
+
+        //so far the survey exists in local memory, but has not been persisted to our db
         const survey = new Survey({
             title,
             subject,
             body,
-            
+            recipients: recipients.split(',').map(email =>  ({email})),
+            //the following id is a mongo generated id - how do I know that?
+            _user: req.user.id,
+            dateSent: Date.now()
+        
         })
     
     })
