@@ -235,9 +235,10 @@ section 10 mongoose for survey creation
   in the survey model in order to track whether a person has provided feedback
     - think about how to implement the y/n votes
     - modifed survey schema to include the y/n counter
-122
-123
-124
+122 - lecture: mongoose sub-document collection 
+      mongo db has a document limit of 4mb 
+123 - modified survey.js to create a mongoose sub-document collection via importing the recipient schema
+124 - 
 125
 126
 127
