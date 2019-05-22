@@ -191,7 +191,9 @@ Section 8: Handling Payments
     define strip key as environment variable
 
 97 - added .env.development and .env.production and added them to git ignore
-98
+98 - react stripe checkout component
+      stripe checout with three required parameters
+      
 99
 100
 101

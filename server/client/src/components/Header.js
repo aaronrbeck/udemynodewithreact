@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 //hook up header to redux-store
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import Payments from './Payments'
 
 
 class Header extends Component {
