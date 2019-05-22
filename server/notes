@@ -208,7 +208,8 @@ Section 8: Handling Payments
 108 - added a credits (default 0) to user model class inside server/models/user.js
 109 - added niave method to check to see if someone is logged in before adding credits
 110 - refactored billingRoutes.js to use new middleware created at requireLogin.js to check login status at specific route points
-111
+111 - added credit status in header
+112 - 
 
 
 
