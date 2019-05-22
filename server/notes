@@ -209,9 +209,48 @@ Section 8: Handling Payments
 109 - added niave method to check to see if someone is logged in before adding credits
 110 - refactored billingRoutes.js to use new middleware created at requireLogin.js to check login status at specific route points
 111 - added credit status in header
-112 - 
+112 - lecture: explaination on how user model update flow works, watch again.  review this
+
+section 9 back end to front end routing in production
+113 - lecture: express server behavior - review
+      how do we ensure that express handles all our assets in production mode, because in production mode create react app no longer exists?
+      if a user tries to access a route not defined in express, we want express to assume that the user is tyring to access a route defined by react router
+        so get express to hand off the react index.html file
+        so then the index.html asks express to see the client/build/static/js/main.js file
+        at this point browser has access to react information and it can know which component(s) to look at
+114 - added to server index.js logic for production route handling
+115
+116
+117
 
 
+section 10 mongoose for survey creation
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
 
 
 where I'm stuck:
