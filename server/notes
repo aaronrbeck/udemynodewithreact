@@ -195,7 +195,8 @@ Section 8: Handling Payments
 99  -stripe tokens - added payment button to header component
 100 - resolved key warning from console, customized stripe payment properties, changed stripe button styling
 101 - wrote action creator in src/actions/index.js for when tokens are added
-102
+102 - import connect and * in payments.js, changed parameter from console logging to         token={token => this.props.handleToken(token)}
+
 103
 104
 105
