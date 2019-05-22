@@ -187,8 +187,10 @@ Section 8: Handling Payments
   keys placed on front end
   interesting info near the end about how es15 syntax does not allow for logic before an import statment, but classic syntax does allow for logic before imports
 
-96
-97
+96 - react key processor
+    define strip key as environment variable
+
+97 - added .env.development and .env.production and added them to git ignore
 98
 99
 100
