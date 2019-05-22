@@ -242,7 +242,7 @@ section 10 mongoose for survey creation
       added dateSent and lastResponded properties to help user
 125 - create surveyRoutes.js handler, 
 126 - create middleware to check if user has enough credits to make a survey
-127
+127 - started setting up a new survey instance in surveyRoutes.js
 128
 129
 130
