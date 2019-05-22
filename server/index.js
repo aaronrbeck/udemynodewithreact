@@ -12,6 +12,7 @@ const mongoose = require('mongoose')
 //if you need to store more info consider using the express session module found on npm
 const cookieSession = require('cookie-session')
 const passport = require('passport')
+const bodyParser = require('body-parser')
 const keys = require('./config/keys')
 require('./models/User')
 require('./services/passport');
@@ -27,10 +28,8 @@ mongoose.connect(keys.mongoURI)
 //I guess it allows us to make multiple objects with express inside them?
 const app = express();
 
-
-//the following app.use calls are considered middleware
-
-
+app.use(bodyParser.json())
+//the following app.use calls are considered middlewar
 app.use(
         cookieSession({
                 maxAge: 30 * 24 * 60 * 60 * 1000,
@@ -42,6 +41,8 @@ app.use(passport.session())
 
 
 require('./routes/authRoutes')(app);
+//billing routes
+require('./routes/billingRoutes')(app)
 
 
 

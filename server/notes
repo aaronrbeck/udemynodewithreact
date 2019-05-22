@@ -196,11 +196,14 @@ Section 8: Handling Payments
 100 - resolved key warning from console, customized stripe payment properties, changed stripe button styling
 101 - wrote action creator in src/actions/index.js for when tokens are added
 102 - import connect and * in payments.js, changed parameter from console logging to         token={token => this.props.handleToken(token)}
-
-103
-104
-105
-106
+103 - added express route handler, required billing routes in the express index.js
+104 - install module for server side strip api
+      documentation lecture: stripe
+      when you charge a cc, you create a stripe "charge" object
+105 - bring in secretStripeKey into billingRoutes
+    express does not parse post payloads, so we added body-parser middleware
+    
+106 - 
 107
 108
 109
