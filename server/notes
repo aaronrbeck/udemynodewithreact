@@ -231,7 +231,10 @@ section 10 mongoose for survey creation
     created a new mongoose model class
     added survey.js
     modified server's index.js file to import survey.js
-121
+121 - embedd a sub-document-collection in our recipients property 
+  in the survey model in order to track whether a person has provided feedback
+    - think about how to implement the y/n votes
+    - modifed survey schema to include the y/n counter
 122
 123
 124
