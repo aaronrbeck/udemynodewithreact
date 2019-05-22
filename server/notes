@@ -204,7 +204,7 @@ Section 8: Handling Payments
     express does not parse post payloads, so we added body-parser middleware
     
 106 - changed billingRoutes.js to handle stripe.charges on the back end
-107
+107 - refactored stripe.charges to async
 108
 109
 110

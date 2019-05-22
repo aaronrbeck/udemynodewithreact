@@ -2,8 +2,8 @@ const keys = require('../config/keys')
 const stripe = require ('stripe')(keys.stripeSecretKey)
 
 module.exports = app => {
-    app.post('/api/stripe', (req, res) =>{
-        stripe.charges.create({
+    app.post('/api/stripe', async (req, res) =>{
+        const charge = await stripe.charges.create({
             //logic to handle the strip token
             //specify on back-end charge amount in us cents
             amount: 500,
