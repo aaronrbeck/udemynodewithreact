@@ -21,7 +21,7 @@ module.exports = app =>{
             title,
             subject,
             body,
-            recipients: recipients.split(',').map(email =>  ({email})),
+            recipients: recipients.split(',').map(email =>  ({email: email.trim()})),
             //the following id is a mongo generated id - how do I know that?
             _user: req.user.id,
             dateSent: Date.now()
