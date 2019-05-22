@@ -205,7 +205,7 @@ Section 8: Handling Payments
     
 106 - changed billingRoutes.js to handle stripe.charges on the back end
 107 - refactored stripe.charges to async
-108
+108 - added a credits (default 0) to user model class inside server/models/user.js
 109
 110
 111

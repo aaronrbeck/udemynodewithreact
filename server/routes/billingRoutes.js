@@ -10,12 +10,14 @@ module.exports = app => {
             currency: 'usd',
             description: '$5 for 5 credits',
             source: req.body.id
-            
-
         })
-
         //update user number of credits
-
+            //reference the person
+            req.user.credits += 5
+            //save changes asyncronously:
+            const user = await req.user.save()
+            //call with user again to see the updates
+            res.send(user)
 
     })
 
