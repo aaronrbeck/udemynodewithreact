@@ -193,9 +193,9 @@ Section 8: Handling Payments
 97 - added .env.development and .env.production and added them to git ignore
 98 - react stripe checkout component
       stripe checout with three required parameters
-      
-99
-100
+
+99  -stripe tokens - added payment button to header component
+100 - resolved key warning from console, customized stripe payment properties, changed stripe button styling
 101
 102
 103
