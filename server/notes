@@ -240,8 +240,8 @@ section 10 mongoose for survey creation
 123 - modified survey.js to create a mongoose sub-document collection via importing the recipient schema
 124 - add _user property to set up relationship between survey and user in survey.js
       added dateSent and lastResponded properties to help user
-125
-126
+125 - create surveyRoutes.js handler, 
+126 - create middleware to check if user has enough credits to make a survey
 127
 128
 129
