@@ -15,6 +15,8 @@ const passport = require('passport')
 const bodyParser = require('body-parser')
 const keys = require('./config/keys')
 require('./models/User')
+//import the survey mongoose model class
+require('./models/Survey')
 require('./services/passport')
 
 

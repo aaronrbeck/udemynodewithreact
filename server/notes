@@ -219,15 +219,18 @@ section 9 back end to front end routing in production
         so then the index.html asks express to see the client/build/static/js/main.js file
         at this point browser has access to react information and it can know which component(s) to look at
 114 - added to server index.js logic for production route handling
-115
-116
-117
+115 - lecture: deployment methods/philosophies
+116 - added server package.json script for heroku deployment-production builds
+117 - lecture of some sort
 
 
 section 10 mongoose for survey creation
-118
-119
-120
+118 - survey planning lecture
+119 - survey route planning lecture
+120 - add survey route handler
+    created a new mongoose model class
+    added survey.js
+    modified server's index.js file to import survey.js
 121
 122
 123
@@ -256,6 +259,21 @@ section 10 mongoose for survey creation
 where I'm stuck:
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a1
 
 how I got unstuck:
 
@@ -306,7 +324,7 @@ lesson 39 - import order of operations
 
   so I guess I need to go back to where we set up heroku and understand how git is connected to heroku for this project
 
-alsk
+
 
 59/60 ish: - with some research I decided to revert to a prior babel version.
             so far problem seems solved via
@@ -345,5 +363,96 @@ alsk
 
     to const store = createStore(reducers, {}, applyMiddleware(reduxThunk))
 
+lesson 116 - updated package.json npm and node engine versions to allow heroku build on heroku push master
+  production build via heroku push
+  2019-05-20T19:45:37.555413+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+  2019-05-20T19:45:37.618494+00:00 heroku[web.1]: Process exited with status 143
 
-8
+  2019-05-20T19:48:07.121846+00:00 heroku[router]: at=error code=H12 desc="Request timeout"
+  method=GET path="/auth/google/callback?code=4%2FUAEtf9f3cItDEElN_vb759ys844VZKLzlCKPygwq33u3Q80i5qJMdcpwsSF4lsMEPECAUCp-4MKU1CXXxEWw1nA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email"
+  host=serene-hollows-22376.herokuapp.com request_id=0177a035-d44b-4fdf-8908-f5edad1c7d0a fwd="160.2.123.187" dyno=web.1 connect=0ms service=30001ms status=503 
+
+  2019-05-20T19:50:30.969511+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET
+  path="/auth/google/callback?code=4%2FUAHlQCRVFlrOYbQuWWrOLaaY9Zp_1i_MCajzml6as1CK1No_bj3gHKf4xeShS-9cZPxVdr9ph-ImdFYozGp9cDE&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email"
+
+  2019-05-20T19:59:57.961489+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+  2019-05-20T19:59:58.234399+00:00 heroku[web.1]: Process exited with status 143
+
+  2019-05-20T20:01:29.370065+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+  2019-05-20T20:01:29.458974+00:00 heroku[web.1]: Process exited with status 143
+
+  2019-05-20T20:39:33.182616+00:00 heroku[web.1]: State changed from up to down
+  2019-05-20T20:39:34.081381+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+  2019-05-20T20:39:34.190636+00:00 heroku[web.1]: Process exited with status 143
+  2019-05-21T23:35:12.082553+00:00 heroku[web.1]: State changed from down to starting
+
+  2019-05-21T23:35:42.479561+00:00 app[api]: Release v14 created by user beckaaronr@gmail.com
+  2019-05-21T23:35:43.746196+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+  2019-05-21T23:35:43.853600+00:00 heroku[web.1]: Process exited with status 143
+
+  2019-05-22T00:10:10.173733+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+  2019-05-22T00:10:10.419886+00:00 heroku[web.1]: Process exited with status 143
+  2019-05-22T16:44:11.000000+00:00 app[api]: Build started by user beckaaronr@gmail.com
+  2019-05-22T16:45:11.000000+00:00 app[api]: Build failed -- check your build output: 
+  https://dashboard.heroku.com/apps/2093327c-cc7a-4378-8f15-5d1441bd0de2/activity/builds/23933741-2769-44f8-bf13-bdcac7c50564
+
+    Steps:
+    followed   https://dashboard.heroku.com/apps/2093327c-cc7a-4378-8f15-5d1441bd0de2/activity/builds/23933741-2769-44f8-bf13-bdcac7c50564
+        I didn't see anything obvious
+    followed: https://devcenter.heroku.com/articles/troubleshooting-node-deploys
+      *buildpack looks good: heroku/nodejs
+      *Compare Node and npm Versions
+    Your production environment should mirror your development environment, especially in the case of important binaries. First, check your local versions:
+
+    node --version
+    npm --version
+    Then, compare the results with your package.json engines section. You are specifying a node version, right?
+
+    You can see which binaries Heroku is using on each deploy in the build logs, which look something like this:
+
+    remote: -----> Installing binaries
+    remote:        Resolving node version 10.x...
+    remote:        Downloading and installing node 10.3.0...
+    remote:        Using default npm version: 6.4.1
+    They should match up with the same versions you saw locally. If they don’t, you should specify the matching versions in your package.json.
+
+    ----this project:
+    node --version v11.12.0
+    npm --version 6.9.0
+    but packagejson:
+    "engines": {
+    "node": "8.1.1",
+    "npm": "5.0.3"
+  },
+
+  so I changed my packagejson to 
+  "engines": {
+    "node": "11.12.0",
+    "npm": "6.9.0"
+  },
+  the re-pushed heroku which worked
+
+  after logging in I did receive a pop up message saying:
+  Stripe Checkout can't communicate with our payment processor
+  because the API key is invalid. Please contact the website owner
+  or support@stripe.com.
+
+  I am going to ignore this for the moment, but will add it to the que of where I'm stuck
+
+
+lesson 116: invalid stripe api key - changed .env.production key
+  succesful push/build via heroku, however
+
+  after logging in I received a pop up message saying:
+  Stripe Checkout can't communicate with our payment processor
+  because the API key is invalid. Please contact the website owner
+  or support@stripe.com.
+  q/a, others had same problem, someone suggested that env.production should not be in the gitignore file, 
+  but I swear andrew implied that committing both .env.production and .env.development to gitignore was the thing to do
+  -----went back and re-watched lesson 97
+        one thing that I had missed the first time around:
+        andrew used the same public key for both the .env.production and .env.development files
+        i had thought that the production got the secret key
+        so I went back and modifed the .env.production file
+        redeploy to push heroku master
+    and it worked.
