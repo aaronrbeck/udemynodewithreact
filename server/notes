@@ -263,14 +263,13 @@ section 10 mongoose for survey creation
 
 
 140 - rewrote surveyTemplate.js to return
-141
-142
-143
+141 - in surveyRoutes.js marked app.post as async, added await in mailer.js to send const response, these feel like really weird places for await - can't do this stuff on my own yet
+    added try block in surveyRoutes.js - that's a new one for me, never seen that before
+142 - sendgrid re
+143 - changed href in surveyTemplate after user clicks y/n on survey
 
 
 where I'm stuck:
-
-
 
 
 
