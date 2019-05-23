@@ -245,10 +245,11 @@ section 10 mongoose for survey creation
 127 - started setting up a new survey instance in surveyRoutes.js
 128 - fished creating survey property
 129 - modification to subdocument creation in order to trim white space off between entries
-130
-131
-132
-133
+130 - lecture that I pretty much slept through
+131 - lecture - sendGrid overview slept through this one too
+    sendgrid info
+132 - sign up with sendGrid, set up production and dev keys, install sendGrid module
+133 - start to set up mailer object
 134
 135
 136
