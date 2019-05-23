@@ -21,6 +21,8 @@ class Mailer extends helper.Mail{
         
     }
 
+
+
     formatAddresses(recipients){
         return recipients.map(({ email }) => {
             return new helper.Email(email)
@@ -29,7 +31,7 @@ class Mailer extends helper.Mail{
     //enable click tracking - also a built in sendgrid capability
     addClickTracking(){
         const trackingSettings = new helper.TrackingSettings()
-        const addClickTracking = new helper.ClickTracking(true, true)
+        const ClickTracking = new helper.ClickTracking(true, true)
     
         trackingSettings.setClickTracking(ClickTracking)
         this.addTrackingSettings(trackingSettings)

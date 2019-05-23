@@ -255,7 +255,13 @@ section 10 mongoose for survey creation
 136 - added helper function formatAddress to the mailer.js file
 137 - finished writing the nasty logic of sendgrid - no idea what is going on
 138 - still not sure what happened here.  the instructor keeps calling this sendgrid library ugly, I'm burnt, tired no clue what I just did 
-139
+139 - used axios to do a rest test through the terminal - worth watching again and learning how to do this for yourself
+  need to do a rest test, but postman is no good because of oauth flow
+    instead he is somehow going to use axios because info we want to verify is in cookie?
+    ok, this is sorta interesting.  in inspector console he uses axios to write test crud calls
+    he makes a teste survey in the console
+
+
 140
 141
 142
@@ -263,8 +269,6 @@ section 10 mongoose for survey creation
 
 
 where I'm stuck:
-
-
 
 
 
@@ -447,6 +451,7 @@ lesson 116 - updated package.json npm and node engine versions to allow heroku b
 
 
 lesson 116: invalid stripe api key - changed .env.production key
+
   succesful push/build via heroku, however
 
   after logging in I received a pop up message saying:
@@ -462,3 +467,10 @@ lesson 116: invalid stripe api key - changed .env.production key
         so I went back and modifed the .env.production file
         redeploy to push heroku master
     and it worked.
+
+139 - ReferenceError: ClickTracking is not defined
+  after re-watching a couple videos back I
+  changed const addClickTracking
+  to const ClickTracking
+  the real question is why did I not recognize that error on my own?  because I'm still at the stage of so little understanding that I'm justy copying.  get with the program, man
+

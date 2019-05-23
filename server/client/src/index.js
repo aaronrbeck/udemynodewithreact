@@ -11,6 +11,10 @@ import App from './components/App'
 import reducers from './reducers'
 
 
+//temporary test code to test Rest via axios:
+import axios from 'axios'
+window.axios = axios
+
 
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk))
 

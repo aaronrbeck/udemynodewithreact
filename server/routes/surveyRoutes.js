@@ -33,6 +33,7 @@ module.exports = app =>{
 
         //good place to send email
         //how do we use a class to send the email?
-        const mailer = new Mailer(survey, templateTemplate(survey))
+        const mailer = new Mailer(survey, surveyTemplate(survey))
+        mailer.send()
     })
 }
