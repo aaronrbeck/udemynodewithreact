@@ -292,26 +292,26 @@ section 11 - Front end survey form
 157 - styling form: added canel button, moved submit/next button to right
 158 - started form validation
 159 - reduxForms is rad; we desctructured touched and error over in surveyfild.js to perform some form validation -  cool
-16 -
-16 -
-16 -
-16 -
-16 -
-16 -
-16 -
-16 -
-16 -
-16 -
-17 -
-17 -
-17 -
-17 -
-17 -
-17 -
-17 -
-17 -
-17 -
-17 -
+160 - formatting/styled to make the validation error message more readable, also refactored error validation process into a lodash for each loop
+161 -
+162 -
+163 -
+164 -
+165 -
+166 -
+167 -
+168 -
+169 -
+170 -
+171 -
+172 -
+173 -
+174 -
+175 -
+176 -
+177 -
+178 -
+179 -
 
 
 

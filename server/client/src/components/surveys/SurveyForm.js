@@ -65,9 +65,17 @@ renderFields(){
 function validate(values){
     const errors = {}
 
-    if (!values.title){
-        errors.title = 'you must provide a title'
-    }
+    //use the lodash library to run a for each
+    //loop over our FIELDS array to validate 
+    //whether or not any fields had been left empty
+
+    _.each(FIELDS, ({ name }) => {
+        //if there is no value, attach an error to the reduxForm error object
+        if (!values[name]){
+            errors[name] = 'You must provide a value'
+        }
+
+    })
 
 
     return errors
