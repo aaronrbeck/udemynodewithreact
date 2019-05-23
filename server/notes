@@ -274,10 +274,14 @@ section 11 - Front end survey form
 144 - create Dashboard.js
 145 - made add red button to dashboard component appear
 146 - used react router dom  in dashboard to navigate to /new
-147 -
-148 -
-149 -
-150 -
+147 - lecture: survey form component structure overview
+148 - lecture: why use redux forms
+      the point of redux is to put redux at the top, pass state/props up to redux so that it can then pass down to children
+      redux form does the above for us, redux form saves us the trouble of having to wire up manual action creators
+      redux form is overkill for simple forms, but super good for complicated forms
+      redux form is just redux, but it makes it so we don't have to maually write code we would otherwise need to write
+149 - npm install redux-form@8.1.0 this specific version
+150 - redux form documentaion is good, hook up form reducer to reduxform, created  SurveyNew   components
 151 -
 152 -
 153 -
