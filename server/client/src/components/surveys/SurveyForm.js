@@ -6,18 +6,11 @@ import { reduxForm, Field } from 'redux-form'
 import { Link } from 'react-router-dom'
 import SurveyField from './SurveyField'
 import validateEmails from '../../utils/validateEmails'
-
+import formFields from './formFields'
 
 //lesson 156 DRY things up with an array
 //we will use the lodash library map function
 
-const FIELDS = [
-    { label:'Survey Title', name:'title'},
-    { label:'Subject', name:'subject'},
-    { label:'Email Body', name:'body'},
-    { label:'Recipient List', name:'emails'}
-
-]
 
 
 
@@ -29,7 +22,7 @@ class SurveyForm extends Component {
 //helper function that helps render the surveyfields into this form
 renderFields(){
     //return mapped the fields array and 
-    return _.map(FIELDS, ({ label, name }) =>{
+    return _.map(formFields, ({ label, name }) =>{
         return <Field 
                 key={name}
                 component={SurveyField} 
@@ -71,10 +64,10 @@ function validate(values){
     errors.emails = validateEmails(values.emails || '')
 
     //use the lodash library to run a for each
-    //loop over our FIELDS array to validate 
+    //loop over our formField array to validate
     //whether or not any fields had been left empty
 
-    _.each(FIELDS, ({ name }) => {
+    _.each(formFields, ({ name }) => {
         //if there is no value, attach an error to the reduxForm error object
         if (!values[name]){
             errors[name] = 'You must provide a value'
