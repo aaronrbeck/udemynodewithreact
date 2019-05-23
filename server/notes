@@ -250,7 +250,7 @@ section 10 mongoose for survey creation
     sendgrid info
 132 - sign up with sendGrid, set up production and dev keys, install sendGrid module
 133 - start to set up mailer object
-134
+134 - I have absolutely no clue what just happened, at all.  mailer surveyTemplate mumbo jumbo
 135
 136
 137

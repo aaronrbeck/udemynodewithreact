@@ -3,6 +3,9 @@ const mongoose = require('mongoose')
 const requireLogin = require('../middlewares/requireLogin')
 const requireCredits = require('../middlewares/requireCredits')
 
+const Mailer = require('../services/Mailer')
+
+const surveyTemplate = require('../services/emailTemplates/surveyTemplate')
 
 //somehow the following line allows us to side-step testing?  Why would we want to side-step future testing?
 const Survey = mongoose.model('surveys')
@@ -27,6 +30,9 @@ module.exports = app =>{
             dateSent: Date.now()
         
         })
-    
+
+        //good place to send email
+        //how do we use a class to send the email?
+        const mailer = new Mailer(survey, templateTemplate(survey))
     })
 }
