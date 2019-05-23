@@ -14,7 +14,10 @@ class SurveyNew extends Component {
     //helper method:
     renderContent(){
         if(this.state.showFormReview){
-            return <SurveyFormReview />
+            return <SurveyFormReview 
+            //pass a callback to return from the review page
+            onCancel={()=> this.setState({ showFormReview: false })}
+            />
         }
         return <SurveyForm 
         // add a callback function responsible for flipping
