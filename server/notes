@@ -283,7 +283,8 @@ section 11 - Front end survey form
 149 - npm install redux-form@8.1.0 this specific version
 150 - redux form documentaion is good, hook up form reducer to reduxform, created  SurveyNew   components
 151 - created survey form component, setup reduxForm inside surveyForm.js
-152 -
+152 - destructured Field from redux-form, added Field form to surveyform
+    Field is a swiss army knife that gives us access to tons of html
 153 -
 154 -
 155 -
@@ -502,3 +503,5 @@ lesson 116: invalid stripe api key - changed .env.production key
   to const ClickTracking
   the real question is why did I not recognize that error on my own?  because I'm still at the stage of so little understanding that I'm justy copying.  get with the program, man
 
+152 killed and restarted server
+  Failed to load resource: the server responded with a status of 504 (Gateway Timeout)
