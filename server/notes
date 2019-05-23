@@ -314,10 +314,11 @@ section 11 - Front end survey form
     actions -> index.js
 170 - using default reduxForm behavior as a trick to clear form when navigating away from newform unless the click next
 171 - rename client side language to match server side language: changed email to recipients on react side of project
-172 -
-173 -
-
-
+172 - modified submitSurvey action creator to post to db with axios
+    this is not working for me
+173 - redirect user after sending email - watch this one again
+  we are going to "teach' surveyFormReview about react-router which will get passed on to review page with the send button
+  using withRouter to get access to history object
 
 Secion 12: handling webhook data
 174 -
@@ -336,11 +337,8 @@ clean up the trailing comma behavior identified at the end of lesson 162 in the 
 
 where I'm stuck:
 
-
-
-169
-in surveyFormReview the submitSurvey is not being accessed (it is greyed out)
-but everything is compiling.  not sure what is going on
+end of section 11: credits not deducting properly
+taking a break
 
 
 
@@ -563,6 +561,23 @@ lesson 116: invalid stripe api key - changed .env.production key
 
 
 **
+169 match instructor formatting instead of following vsc suggestion when
+  building  this button: 
+   <button 
+        //this onClick is fomatted different than the instructor's, I followed my vsc pompts and ended up with the actions. portion that the instructor does not have
+        //the differnt formatting was preventing me from acceessing the formValues at the start of this functional component
+        //i chaged structure to match instructor sturcture and emails are being sent from the reviewpage successuflly
+        //I however have something wrong as I'm not deducting credits correctly
+        //save that for tomorrow
+        onClick={()=>submitSurvey(formValues, history)}
+        className="green btn-flat right white-text">
+        Send Survey
+        <i className="material-icons right">email</i>
+        </button>
+  in surveyFormReview the submitSurvey is not being accessed (it is greyed out)
+  but everything is compiling.  not sure what is going on
+  172
+  application not sending email the way the instructors app is sending an email
 
 
 *

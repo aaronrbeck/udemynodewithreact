@@ -7,11 +7,13 @@ import { connect } from 'react-redux'
 //lesson 168 import formFields array:
 import formFields from './formFields'
 import _ from 'lodash'
+//lesson 173 import withRouter
+import { withRouter } from 'react-router-dom'
 
 // lesson 169, import actions creator - note that my file structure is way way different
 import * as actions from '../../actions'
 
-const SurveyFormReview = ({ onCancel, formValues, submitSurvey }) => {
+const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
     //map formFields array with lodash and return some jsx
     const reviewFields = _.map(formFields, ({ name, label}) =>{
         return(
@@ -41,7 +43,11 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey }) => {
 
         <button 
         //this onClick is fomatted different than the instructor's, I followed my vsc pompts and ended up with the actions. portion that the instructor does not have
-        onClick={()=>actions.submitSurvey(formValues)}
+        //the differnt formatting was preventing me from acceessing the formValues at the start of this functional component
+        //i chaged structure to match instructor sturcture and emails are being sent from the reviewpage successuflly
+        //I however have something wrong as I'm not deducting credits correctly
+        //save that for tomorrow
+        onClick={()=>submitSurvey(formValues, history)}
         className="green btn-flat right white-text">
         Send Survey
         <i className="material-icons right">email</i>
@@ -60,4 +66,4 @@ function mapStateToProps(state){
 
     }
 
-export default connect(mapStateToProps, actions)(SurveyFormReview)
+export default connect(mapStateToProps, actions)(withRouter(SurveyFormReview))
