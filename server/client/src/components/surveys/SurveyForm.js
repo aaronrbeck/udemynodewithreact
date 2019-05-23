@@ -89,5 +89,7 @@ function validate(values){
 
 export default reduxForm({
     validate,
-    form: 'surveyForm'
+    form: 'surveyForm',
+    //lesson 166 fix issue where form data does not persist between new and review
+    destroyOnUnmount: false
 })(SurveyForm)
