@@ -307,7 +307,7 @@ section 11 - Front end survey form
 167 - added survey title label to surveyformreview functional component - I lost track of the flow of information for sure here
       placed FIELDS array object into it's own file (formFields.js), then imported into surveyform and surveyformreview
       imported Fields array object into surveyformreview.js so that we can build a bunch of like-minded divs
-168 - 
+168 - imported Fields array into surveyformreview, looped it to render some divs
 169 -
 170 -
 171 -

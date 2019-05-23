@@ -4,11 +4,30 @@
 import React from 'react'
 //lesson 166 import connect helper:
 import { connect } from 'react-redux'
+//lesson 168 import formFields array:
+import formFields from './formFields'
+import _ from 'lodash'
+
 
 const SurveyFormReview = ({ onCancel, formValues }) => {
+    //map formFields array with lodash and return some jsx
+    const reviewFields = _.map(formFields, ({ name, label}) =>{
+        return(
+            <div key={name}>
+                <label>{label}</label>
+            
+            <div>
+                {formValues[name]}
+            </div>
+            </div>
+        )
+    })
+    
     return(
         <div>
             <h5>Please confirm information</h5>
+        
+                {reviewFields}
         
         
         <button
