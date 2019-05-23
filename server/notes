@@ -253,7 +253,7 @@ section 10 mongoose for survey creation
 134 - I have absolutely no clue what just happened, at all.  mailer surveyTemplate mumbo jumbo
 135 - fill out implementation of mailer
 136 - added helper function formatAddress to the mailer.js file
-137
+137 - finished writing the nasty logic of sendgrid - no idea what is going on
 138
 139
 140
