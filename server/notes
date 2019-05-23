@@ -308,8 +308,11 @@ section 11 - Front end survey form
       placed FIELDS array object into it's own file (formFields.js), then imported into surveyform and surveyformreview
       imported Fields array object into surveyformreview.js so that we can build a bunch of like-minded divs
 168 - imported Fields array into surveyformreview, looped it to render some divs
-169 -
-170 -
+169 - start work on submit button for survey form
+    with redux we are always talking about an action action creator
+    so this button is tied to an action creator becaue we want to change the data inside of our app
+    actions -> index.js
+170 - using default reduxForm behavior as a trick to clear form when navigating away from newform unless the click next
 171 -
 172 -
 173 -
@@ -335,8 +338,9 @@ where I'm stuck:
 
 
 
-
-
+169
+in surveyFormReview the submitSurvey is not being accessed (it is greyed out)
+but everything is compiling.  not sure what is going on
 
 
 

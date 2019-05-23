@@ -3,7 +3,8 @@
 import React, { Component } from 'react'
 import SurveyForm from './SurveyForm'
 import SurveyFormReview from './SurveyFormReview'
-
+//lesson 170 import reduxForm helper
+import { reduxForm } from 'redux-form'
 
 class SurveyNew extends Component {
     //create react app has a babel function that 
@@ -34,4 +35,6 @@ class SurveyNew extends Component {
         )
     }
 }
-export default SurveyNew
+export default reduxForm({
+    form: 'surveyForm'
+}) (SurveyNew)
