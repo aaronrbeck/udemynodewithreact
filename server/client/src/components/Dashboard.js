@@ -4,6 +4,11 @@ const Dashboard = () => {
     return (
         <div>
             hi from dashboad.js
+            <div className ="fixed-action-btn">
+            <a className="btn-floating btn-large red">
+                <i className="material-icons">add</i>
+            </a>
+            </div>
         </div>
     )
 }
