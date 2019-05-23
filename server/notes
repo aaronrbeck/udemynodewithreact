@@ -273,7 +273,7 @@ section 10 mongoose for survey creation
 section 11 - Front end survey form 
 144 - create Dashboard.js
 145 - made add red button to dashboard component appear
-146 -
+146 - used react router dom  in dashboard to navigate to /new
 147 -
 148 -
 149 -
