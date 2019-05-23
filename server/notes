@@ -251,8 +251,8 @@ section 10 mongoose for survey creation
 132 - sign up with sendGrid, set up production and dev keys, install sendGrid module
 133 - start to set up mailer object
 134 - I have absolutely no clue what just happened, at all.  mailer surveyTemplate mumbo jumbo
-135
-136
+135 - fill out implementation of mailer
+136 - added helper function formatAddress to the mailer.js file
 137
 138
 139
