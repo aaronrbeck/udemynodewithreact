@@ -285,7 +285,7 @@ section 11 - Front end survey form
 151 - created survey form component, setup reduxForm inside surveyForm.js
 152 - destructured Field from redux-form, added Field form to surveyform
     Field is a swiss army knife that gives us access to tons of html
-153 -
+153 - build seperate survey components, import SurveyField into SurveyForm and used in renderFields() function
 154 -
 155 -
 156 -
@@ -300,9 +300,6 @@ section 11 - Front end survey form
 
 
 where I'm stuck:
-
-
-
 
 
 
@@ -504,4 +501,32 @@ lesson 116: invalid stripe api key - changed .env.production key
   the real question is why did I not recognize that error on my own?  because I'm still at the stage of so little understanding that I'm justy copying.  get with the program, man
 
 152 killed and restarted server
+
   Failed to load resource: the server responded with a status of 504 (Gateway Timeout)
+
+
+153 - 2 things: passing bad property
+  in SurveyForm.js when I was building the field I tried passing the string "{SurveyField}"
+  to the component property instead of {SurveyField}
+  this resolved the error and warning below, but I got a 504 gateway timeout, so on to that problem
+  error:Warning: <{SurveyField} /> is using incorrect casing. 
+    Use PascalCase for React components, or lowercase for HTML elements.
+    This I do not understand at all.
+    it appears that somehow I am jamming up some middleware helpers and it is 
+    pointing to a spelling error at SurveyField that I'm not seeing
+
+  warning: ./src/components/surveys/SurveyForm.js
+    Line 5:  'SurveyField' is defined but never used  no-unused-vars
+    When I wrote this I was scratching my head as my import statment 
+    of SurveyField was never accessed when I called it in the SurveyForm
+
+
+153 - resovled by restarting server
+  Failed to load resource: the server responded with a 
+  status of 504 (Gateway Timeout)
+
+
+**
+
+
+*
