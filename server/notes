@@ -293,7 +293,9 @@ section 11 - Front end survey form
 158 - started form validation
 159 - reduxForms is rad; we desctructured touched and error over in surveyfild.js to perform some form validation -  cool
 160 - formatting/styled to make the validation error message more readable, also refactored error validation process into a lodash for each loop
-161 -
+161 - started function for validateemails.js
+  validating email list on surveyform.js
+    created a utils folder in react src
 162 -
 163 -
 164 -
