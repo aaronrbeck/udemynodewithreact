@@ -313,7 +313,7 @@ section 11 - Front end survey form
     so this button is tied to an action creator becaue we want to change the data inside of our app
     actions -> index.js
 170 - using default reduxForm behavior as a trick to clear form when navigating away from newform unless the click next
-171 -
+171 - rename client side language to match server side language: changed email to recipients on react side of project
 172 -
 173 -
 

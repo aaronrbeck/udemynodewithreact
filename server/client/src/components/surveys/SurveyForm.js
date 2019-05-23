@@ -62,7 +62,7 @@ renderFields(){
 //reduxforms gives us access to the values (which has body, title, etc)
 function validate(values){
     const errors = {}
-    errors.emails = validateEmails(values.emails || '')
+    errors.recipients = validateEmails(values.recipients || '')
 
     //use the lodash library to run a for each
     //loop over our formField array to validate
