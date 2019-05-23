@@ -290,8 +290,28 @@ section 11 - Front end survey form
 155 - some destructuring, added label prop to SurveyForm.js <Field
 156 -   DRY up the survey form with an array that we mapped through with lodash to build out our indvidiual input lines
 157 - styling form: added canel button, moved submit/next button to right
-158 -
+158 - started form validation
 159 -
+16 -
+16 -
+16 -
+16 -
+16 -
+16 -
+16 -
+16 -
+16 -
+16 -
+17 -
+17 -
+17 -
+17 -
+17 -
+17 -
+17 -
+17 -
+17 -
+17 -
 
 
 

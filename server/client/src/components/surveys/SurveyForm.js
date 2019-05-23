@@ -60,6 +60,21 @@ renderFields(){
         )
     }
 }
+
+//reduxforms gives us access to the values (which has body, title, etc)
+function validate(values){
+    const errors = {}
+
+    if (!values.title){
+        errors.title = 'provide a title'
+    }
+
+
+    return errors
+}
+
+
 export default reduxForm({
+    validate,
     form: 'surveyForm'
 })(SurveyForm)
