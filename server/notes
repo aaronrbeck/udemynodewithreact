@@ -296,7 +296,7 @@ section 11 - Front end survey form
 161 - started function for validateemails.js
   validating email list on surveyform.js
     created a utils folder in react src
-162 -
+162 - finshed the validate email process
 163 -
 164 -
 165 -
@@ -316,7 +316,8 @@ section 11 - Front end survey form
 179 -
 
 
-
+project
+clean up the trailing comma behavior identified at the end of lesson 162 in the email validation process 
 
 
 

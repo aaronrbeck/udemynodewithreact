@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import { reduxForm, Field } from 'redux-form'
 import { Link } from 'react-router-dom'
 import SurveyField from './SurveyField'
+import validateEmails from '../../utils/validateEmails'
 
 
 //lesson 156 DRY things up with an array
@@ -64,6 +65,7 @@ renderFields(){
 //reduxforms gives us access to the values (which has body, title, etc)
 function validate(values){
     const errors = {}
+    errors.emails = validateEmails(values.emails || '')
 
     //use the lodash library to run a for each
     //loop over our FIELDS array to validate 
@@ -76,7 +78,7 @@ function validate(values){
         }
 
     })
-
+    
 
     return errors
 }
