@@ -1,12 +1,14 @@
-//class based component
+//survey new shows a survey form and survey review
 
 import React, { Component } from 'react'
+import SurveyForm from './SurveyForm'
+
 
 class SurveyNew extends Component {
     render(){
         return (
             <div>
-                hi from survey new
+            <SurveyForm />
             </div>
         )
     }

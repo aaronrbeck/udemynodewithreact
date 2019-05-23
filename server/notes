@@ -282,7 +282,7 @@ section 11 - Front end survey form
       redux form is just redux, but it makes it so we don't have to maually write code we would otherwise need to write
 149 - npm install redux-form@8.1.0 this specific version
 150 - redux form documentaion is good, hook up form reducer to reduxform, created  SurveyNew   components
-151 -
+151 - created survey form component, setup reduxForm inside surveyForm.js
 152 -
 153 -
 154 -
