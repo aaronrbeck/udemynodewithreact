@@ -66,7 +66,7 @@ function validate(values){
     const errors = {}
 
     if (!values.title){
-        errors.title = 'provide a title'
+        errors.title = 'you must provide a title'
     }
 
 
