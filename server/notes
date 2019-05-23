@@ -288,7 +288,7 @@ section 11 - Front end survey form
 153 - build seperate survey components, import SurveyField into SurveyForm and used in renderFields() function
 154 - in surveyField we used the spread operator ... to give our component access to a bunch of reduxForm abilities super cool info on event handlers that reduxform can track - worth a re-watch
 155 - some destructuring, added label prop to SurveyForm.js <Field
-156 -   DRY
+156 -   DRY up the survey form with an array that we mapped through with lodash to build out our indvidiual input lines
 157 -
 158 -
 159 -

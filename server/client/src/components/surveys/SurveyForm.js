@@ -1,8 +1,23 @@
 //survey form shows a form for user to add inpu
 
+import _ from 'lodash'
 import React, { Component } from 'react'
 import { reduxForm, Field } from 'redux-form'
 import SurveyField from './SurveyField'
+
+
+//lesson 156 DRY things up with an array
+//we will use the lodash library map function
+
+const FIELDS = [
+    { label:'Survey Title', name:'title'},
+    { label:'Subject', name:'subject'},
+    { label:'Email Body', name:'body'},
+    { label:'Recipient List', name:'emails'}
+
+]
+
+
 
 //reduxForm allows our component to communicate with the store at the top of our application
 //reduxForm is similar to the connect function we used before
@@ -11,37 +26,20 @@ import SurveyField from './SurveyField'
 class SurveyForm extends Component {
 //helper function that helps render the surveyfields into this form
 renderFields(){
-    return ( 
-        <div>
-            <Field 
-                label = "Survey Title"
+    //return mapped the fields array and 
+    return _.map(FIELDS, ({ label, name }) =>{
+        return <Field 
+                key={name}
+                component={SurveyField} 
                 type="text" 
-                name="title" 
-                component={SurveyField}
-            />
-            <Field
-                label="Subject"
-                type="text"
-                name="subject"
-                component={SurveyField}
-            />
-            <Field
-                label="Email Body"
-                type="text"
-                name="body"
-                component={SurveyField}
-            />
-            <Field
-                label="Recipient List"
-                type="text"
-                name="emails"
-                component={SurveyField}
-            />
-        </div>
-    );
+                label={label} 
+                name={name} 
+                />
+    })
+}
 
     
-    }
+    
 
 
     render() {
