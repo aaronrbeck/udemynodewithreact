@@ -330,7 +330,42 @@ Secion 12: handling webhook data
 177 - set up local tunnel enpoint with sendgrid
     new route handler in surveyRoutes.js
 178 - written lesson: added sendgrid_webhook.sh
-179 -
+179 - finalize sendgrid webhook setup - had to do a fair bit of troubleshooting, still might have lingering troubles
+180 - started to modify services/emailTemplate/surveyTemplate.js routes to allow sendgrid to track survey responses 
+181 -
+182 -
+183 -
+184 -
+185 -
+186 -
+187 -
+188 -
+189 -
+190 -
+191 -
+192 -
+193 -
+194 -
+195 -
+196 -
+197 -
+198 -
+199 -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 project
