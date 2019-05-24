@@ -355,8 +355,8 @@ section13 home stretch
 195 -  lecture
   refactored 194a so user does not get back to much info 
 196 - mongoose documentation applying to surveyRoutes
-197 -
-198 -
+197 - lecture?
+198 - added to react/src/actions/types.js and corresponding action creator in src/actions.index.js and reducer in src/reducers/surveysReducer.js then wire that to reducers/index.js
 199 -
 200 -
 201 -
