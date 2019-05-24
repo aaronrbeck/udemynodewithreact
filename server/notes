@@ -358,7 +358,7 @@ section13 home stretch
 197 - lecture?
 198 - added to react/src/actions/types.js and corresponding action creator in src/actions.index.js and reducer in src/reducers/surveysReducer.js then wire that to reducers/index.js
 199 - added SurveyList.js component
-200 -
+200 - added some card styling to SurveyList.js
 201 -
 202 -
 203 -
@@ -393,7 +393,7 @@ taking a break
 184 - URL string parser deprecation warning - applied 'fix' found in q/a, but still getting the warning
 191 -
 my mongo db recipients array shows false when in my test email I had responded yes to the survey?  am I not reading something correctly?
-
+200 - same as above, now that I have cards displaying the survey resultsm, it is obviouse that somehow I am not writing y/n votes to my database
 
 how I got unstuck:
 
