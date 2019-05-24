@@ -335,9 +335,11 @@ Secion 12: handling webhook data
 181 - lecture: pitfalls, pre-processing planning
 182 - planning; then added logic to app.post('/api/surveys/webhooks') in server/routes/surveyRoutes.js 
   lecture: diagram to visualize plan/needs for pre-processing
-183 -
-184 -
-185 -
+183 - did some work on surveyRoutes to help us extract survey info via the returned sandbox object
+184 - written lecture update typeerror: path is not a constructor error
+  I never got the above error, but did get a url deprecation warning, applied 'fix' found in q/a but still getting the warning
+
+185 - added more logic and refactored via destructuring in the surveyRoutes.js file
 186 -
 187 -
 188 -
@@ -385,7 +387,7 @@ end of section 11: credits not deducting properly
 taking a break
 
 
-
+184 - URL string parser deprecation warning - applied 'fix' found in q/a, but still getting the warning
 
 
 
