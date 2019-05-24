@@ -329,7 +329,7 @@ Secion 12: handling webhook data
 176 - set up local tunnel in start scripts
 177 - set up local tunnel enpoint with sendgrid
     new route handler in surveyRoutes.js
-178 -
+178 - written lesson: added sendgrid_webhook.sh
 179 -
 
 
@@ -343,11 +343,11 @@ where I'm stuck:
 
 end of section 11: credits not deducting properly
 taking a break
-179 - I do not have integration with sendgrid working through tunnel
 
 
 
-a1
+
+
 
 how I got unstuck:
 
@@ -564,7 +564,7 @@ lesson 116: invalid stripe api key - changed .env.production key
   status of 504 (Gateway Timeout)
 
 
-**
+*
 169 match instructor formatting instead of following vsc suggestion when
   building  this button: 
    <button 
@@ -594,3 +594,47 @@ lesson 116: invalid stripe api key - changed .env.production key
 
 
 *
+179 - q/a guided me to the answer:
+  • go to the Sendgrid website, in the Sendgrid configuration that Stephen Grider had us set up, change the http post url that we edited with this:
+
+  https://yourRandomSubdomainName.serveo.net/api/surveys/webhooks
+
+  • in your code, add this to your back-end package.json scripts:
+
+  "webhook": "ssh -R yourRandomSubdomainName:80:localhost:5000 serveo.net
+
+  • make sure this webhook runs in your package.json 'dev' script
+
+  "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run webhook\""
+
+  • restart everything, and make a survey, click on yes or no in the email and it should work. it did for me.
+
+    I do not have integration with sendgrid working through tunnel
+    first problem the run script was getting an error that the sendgrid_webhook.sh file did not exist - I moved it into the root directory where
+    it belongs/where i thought i had it
+    second problem: 
+  [2] sh: ./sendgrid_webhook.sh: Permission denied
+  [2] npm ERR! code ELIFECYCLE
+  [2] npm ERR! errno 126
+  [2] npm ERR! server@1.0.0 webhook: `./sendgrid_webhook.sh`
+  npm ERR! Exit status 126
+  [2] npm ERR! 
+  [2] npm ERR! Failed at the server@1.0.0 webhook script.
+  *
+  179 - sendgrid integration still problematic
+      ip: '255.255.255.255',
+    [0]     url: 'http://www.sendgrid.com/',
+    [0]     asm_group_id: 10 } ]
+    [2] Connection to serveo.net closed by remote host.
+    [2] npm ERR! code ELIFECYCLE
+    [2] npm ERR! errno 255
+    [2] npm ERR! server@1.0.0 webhook: `ssh -R aldjfa:80:localhost:5000 serveo.net`
+    [2] npm ERR! Exit status 255
+    [2] npm ERR! 
+    [2] npm ERR! Failed at the server@1.0.0 webhook script.
+    [2] npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+    huh, now it seems to be working.  ?
+*
+
+
+
