@@ -343,7 +343,7 @@ where I'm stuck:
 
 end of section 11: credits not deducting properly
 taking a break
-
+179 - I do not have integration with sendgrid working through tunnel
 
 
 
@@ -582,6 +582,15 @@ lesson 116: invalid stripe api key - changed .env.production key
   but everything is compiling.  not sure what is going on
   172
   application not sending email the way the instructors app is sending an email
+
+179 - corrected a misspelled url path in services/emailtemplate/surveyTemplat.js
+  after voting my redicrect to the thank you url is not working
+
+
+
+
+
+
 
 
 *
