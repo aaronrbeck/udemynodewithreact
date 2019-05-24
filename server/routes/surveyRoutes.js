@@ -15,6 +15,17 @@ module.exports = app =>{
     app.get('/api/surveys/thanks', (req, res)=>{
         res.send('thanks for voting')
     })
+    
+    
+    //lesson 177 set up route for sendgrid tunnel
+    app.post('/api/surveys/webhooks', (req, res) => {
+        console.log(req.body)
+        res.send({})
+    })
+
+
+
+
     app.post('/api/surveys', requireLogin, requireCredits, async (req, res) => {
         //check to see if user is logged in accomplished with requireLogin parameter
         //check to make sure they have enough credits to make a new survey accomplished with requireCredits parameter
