@@ -35,6 +35,12 @@ module.exports = app =>{
             }
         })
         console.log(events)
+        //186 compact is included in the lodash library
+        const compactEvents = _.compact(events)
+        //unique also part of lodash library
+        const uniqueEvents = _.uniqBy(compactEvents, 'email', 'surveyId')
+        console.log(uniqueEvents)
+        res.send({})
     })
 
 
