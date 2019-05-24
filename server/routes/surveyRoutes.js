@@ -1,3 +1,10 @@
+//lesson 183 imported lowdash path and url(url comes with node)
+const _ = require('lodash')
+const Path = require('path-parser')
+const { URL } = require('url')
+
+
+
 const mongoose = require('mongoose')
 
 const requireLogin = require('../middlewares/requireLogin')
@@ -19,8 +26,11 @@ module.exports = app =>{
     
     //lesson 177 set up route for sendgrid tunnel
     app.post('/api/surveys/webhooks', (req, res) => {
-        console.log(req.body)
-        res.send({})
+        const events = _.map(req.body, (event) =>{
+         const pathname = new URL(event.url).pathname
+            const p = new Path('/api/surveys/:surveyId/:choice')
+            console.log(p.test(pathname))
+        })
     })
 
 

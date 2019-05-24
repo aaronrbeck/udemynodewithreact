@@ -332,8 +332,9 @@ Secion 12: handling webhook data
 178 - written lesson: added sendgrid_webhook.sh
 179 - finalize sendgrid webhook setup - had to do a fair bit of troubleshooting, still might have lingering troubles
 180 - started to modify services/emailTemplate/surveyTemplate.js routes to allow sendgrid to track survey responses 
-181 -
-182 -
+181 - lecture: pitfalls, pre-processing planning
+182 - planning; then added logic to app.post('/api/surveys/webhooks') in server/routes/surveyRoutes.js 
+  lecture: diagram to visualize plan/needs for pre-processing
 183 -
 184 -
 185 -
@@ -346,6 +347,10 @@ Secion 12: handling webhook data
 192 -
 193 -
 194 -
+
+
+
+section13 home stretch
 195 -
 196 -
 197 -
