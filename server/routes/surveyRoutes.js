@@ -26,20 +26,21 @@ module.exports = app =>{
     
     //lesson 177 set up route for sendgrid tunnel
     app.post('/api/surveys/webhooks', (req, res) => {
-        const events = _.map(req.body, ({ email, url }) =>{
-         const pathname = new URL(url).pathname
-            const p = new Path('/api/surveys/:surveyId/:choice')
-            const match = p.test(pathname)
-            if (match) {
-                return { email, surveyId: match.surveyId, choice: match.choice}
-            }
-        })
+       //187 refactor
+        const p = new Path('/api/surveys/:surveyId/:choice')
+        //187 refactor using lodash library chain function, chain is an advanted js/lodash topic
+       const events = _.chain(req.body)
+            .map(({ email, url }) =>{
+                const match = p.test(new URL(url).pathname)
+                if (match) {
+                    return { email, surveyId: match.surveyId, choice: match.choice}
+                }
+            })
+            console.log()
+            .compact()
+            .uniqBy('email', 'surveyId')
+            .value()
         console.log(events)
-        //186 compact is included in the lodash library
-        const compactEvents = _.compact(events)
-        //unique also part of lodash library
-        const uniqueEvents = _.uniqBy(compactEvents, 'email', 'surveyId')
-        console.log(uniqueEvents)
         res.send({})
     })
 

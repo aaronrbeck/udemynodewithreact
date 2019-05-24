@@ -341,7 +341,7 @@ Secion 12: handling webhook data
 
 185 - added more logic and refactored via destructuring in the surveyRoutes.js file
 186 - in surveyRoutes we used compact and uniqBy from lodash library to filter out duplicate email responses
-187 -
+187 - refactor surveyRoutes.js with _.chain from lodash library
 188 -
 189 -
 190 -
