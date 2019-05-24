@@ -1,3 +1,6 @@
+//lesson 190
+//using mongo queries so we don't have to pull everything to express first
+
 email = 'a@a.com'
 choice = 'yes' || 'no'
 //we want entire query to happen in mongo world, not on our express server

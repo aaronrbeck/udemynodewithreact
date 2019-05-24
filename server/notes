@@ -345,8 +345,8 @@ Secion 12: handling webhook data
 188 - planning lecture: incrementing mongooes y/n votes, a look at a bad way to find and update specific surveys
 189 - lecture: mongo queries are not easy, rewatch? built lesson189examplequery
 190 - put data in second object in lesson189examplequery - super interesting, watch again, uses mongo operators so mongo can do queries without hauling  everything back to express
-191 -
-192 -
+191 - added modified and refactored 189examplequery.js to surveyRoutes.js
+192 - 
 193 -
 194 -
 

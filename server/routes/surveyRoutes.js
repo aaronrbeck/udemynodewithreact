@@ -29,7 +29,7 @@ module.exports = app =>{
        //187 refactor
         const p = new Path('/api/surveys/:surveyId/:choice')
         //187 refactor using lodash library chain function, chain is an advanted js/lodash topic
-       const events = _.chain(req.body)
+            _.chain(req.body)
             .map(({ email, url }) =>{
                 const match = p.test(new URL(url).pathname)
                 if (match) {
@@ -39,8 +39,26 @@ module.exports = app =>{
             console.log()
             .compact()
             .uniqBy('email', 'surveyId')
+            //191: destructure event to surveyId, email, choice
+            .each(({ surveyId, email, choice }) =>{
+
+            //191 even though the following is a promise, sendgrid does all the work, so we don't need to asynch it.  ?
+                Survey.updateOne(
+                {
+                    //191: gotcha: mongo id's start with _:
+                    _id: surveyId,
+                    recipients: {
+                        $elemMatch: { email: email, responded: false }
+                    }
+                },
+                {
+                    $inc: { [choice]: 1 },
+                    $set: { 'recipients.$.responded': true }
+                 //191 gotcha:   .exec()
+                }).exec()
+               
+            })
             .value()
-        console.log(events)
         res.send({})
     })
 
