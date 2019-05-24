@@ -23,6 +23,8 @@ module.exports = app =>{
     app.get('/api/surveys', requireLogin, async (req, res) =>{
         //current user is available at req.user
         const surveys = await Survey.find({ _user: req.user.id })
+        //196 added .select via mongoose documentation
+            .select({recipients: false })
         res.send(surveys)
     })
     //added in 143 to handle redirect after user clicks y/n in email survey

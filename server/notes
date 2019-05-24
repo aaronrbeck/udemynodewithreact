@@ -351,14 +351,17 @@ Secion 12: handling webhook data
 194a - created an app.get route in surveyRoutes to handle requests to see all surveys a specific user has sent
 
 
-
 section13 home stretch
-195 -
-196 -
+195 -  lecture
+  refactored 194a so user does not get back to much info 
+196 - mongoose documentation applying to surveyRoutes
 197 -
 198 -
 199 -
-
+200 -
+201 -
+202 -
+203 -
 
 
 
