@@ -359,9 +359,21 @@ section13 home stretch
 198 - added to react/src/actions/types.js and corresponding action creator in src/actions.index.js and reducer in src/reducers/surveysReducer.js then wire that to reducers/index.js
 199 - added SurveyList.js component
 200 - added some card styling to SurveyList.js
-201 -
-202 -
-203 -
+201 - sorted SurveyList.js to display most recent surveys first
+202 - ideas of further development:
+    set up a development webhook on sendgrid if I ever wanted to deploy
+    easy:
+      improve desgin of cards
+      add last responded date?
+      backend: allow users to delete created surveys
+      medium:
+      f/b ends allow users to specify the from field for survey emails
+      front - allow client side sorting of surveys
+      very hard:
+      f/b ends allow surveys to be created in 'draft mode'
+    
+
+203 - 
 
 
 
@@ -388,12 +400,61 @@ where I'm stuck:
 
 end of section 11: credits not deducting properly
 taking a break
-
+  what I did:
+  reviewed lesson 104 - creating charges
+    - confirmed that stripe library is an installed dependancy
+  lesson 105 wasn't getting anywhere, started just reading code; deduction happens at const Mailert
+  in surveyRoutes.js, so maybe I can find something there.  need to better annotate which lesson things happened in
+  lesson 111 displaying credit quantity
+  leeson 112 updating credits
+  decided to watch 172 as that is at the end of section 11 where I said I was stuck
+  172 is where stephen first deducted credits
+    hmmm.  now I notice that I don't have anything in my header displaying at all, what is that all about?
 
 184 - URL string parser deprecation warning - applied 'fix' found in q/a, but still getting the warning
 191 -
 my mongo db recipients array shows false when in my test email I had responded yes to the survey?  am I not reading something correctly?
 200 - same as above, now that I have cards displaying the survey resultsm, it is obviouse that somehow I am not writing y/n votes to my database
+
+202 - would need to change sendgrid webhook to production heroku webhook if I ever wanted to deploy
+
+5 day rest period, upon server restart: 
+-------
+./src/reducers/surveysReducer.js
+[1]   Line 1:  'FETCH_USER' is defined but never used  no-unused-vars
+[1] 
+[1] ./src/components/surveys/SurveyList.js
+[1]   Line 25:  The href attribute is required for an anchor to be keyboard accessible. Provide a valid, navigable address as the href value. If you cannot provide an href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+[1]   Line 26:  The href attribute is required for an anchor to be keyboard accessible. Provide a valid, navigable address as the href value. If you cannot provide an href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+[1] 
+[1] Search for the keywords to learn more about each warning.
+[1] To ignore, add // eslint-disable-next-line to the line before.
+
+
+-------also, looks like the mongo cluster is no longer connecting:
+{ MongoNetworkError: connection 4 to cluster0-shard-00-02-qymnq.mongodb.net:27017 closed
+[0]     at TLSSocket.<anonymous> (/Users/aaronrbeck/Documents/Assignments/sandbox/udemynodewithreact/server/node_modules/mongodb-core/lib/connection/connection.js:352:9)
+[0]     at Object.onceWrapper (events.js:285:20)
+[0]     at TLSSocket.emit (events.js:197:13)
+[0]     at _handle.close (net.js:611:12)
+[0]     at TCP.done (_tls_wrap.js:412:7)
+[0]   name: 'MongoNetworkError',
+[0]   errorLabels: [ 'TransientTransactionError' ],
+[0]   [Symbol(mongoErrorContextSymbol)]: {} }
+[1] [HPM] Proxy created: [ '/api', '/auth/google' ]  ->  http://localhost:5000
+
+-------also, header compoenent not loading at all
+------also, auth/google pathe not loading at all
+
+Ok, so I may have tracked a few of the above [problems back to the backend 5000 not starting:
+[HPM] Error occurred while trying to proxy request /api/surveys from localhost:3000 to http://localhost:5000 (ECONNRESET) (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[1] ]
+ECONNRESET (Connection reset by peer): A connection was forcibly closed by a peer. This normally results from a loss of the connection on the remote socket due to a timeout or reboot. Commonly encountered via the http and net modules.
+So I think my current connection is just too weak to work with.
+
+
+
+
 
 how I got unstuck:
 
