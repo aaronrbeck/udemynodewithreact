@@ -24,7 +24,7 @@ require('./services/passport')
 //deprecation warning.  via q/a someone suggested modifying 
 //this mongoose.connect statement from the , { useNewParser: true} onwards
 mongoose.connect(keys.mongoURI, {useNewUrlParser: true})
-        // .then(()=>console.log("MongoDB Connected"))
+         .then(()=>console.log("MongoDB Connected"))
         .catch(err=>console.log(err))
 
 //inside a single node project we may have several different express
