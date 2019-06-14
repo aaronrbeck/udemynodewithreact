@@ -402,6 +402,19 @@ where I'm stuck:
 
 my mongo db recipients array shows false when in my test email I had responded yes to the survey?  am I not reading something correctly?
 200 - same as above, now that I have cards displaying the survey resultsm, it is obviouse that somehow I am not writing y/n votes to my database
+  -rewatched 190, 191, 192
+  went back to 179 verfied sendgrid setup, 
+  - one possibility may be that sendneed to check if sendgrid is looking at development or production, it can only do one at a time.
+  so i went  back and rewatched lesson 176 and
+    -verified localtunnel dependancy
+    pulled out webhook (it might be production web hook, will need to put back in later) 
+     "webhook": "ssh -R aldjfa:80:localhost:5000 serveo.net"
+     that created some major weird error 403s in the terminal: tunnel server offline: Request failed with status code 403, retry 1s
+     I'm going to switch back to how things were before
+     dev webhook : "webhook": "lt -p 5000 -s alksdja"
+     what I think is production webhook:      "webhook": "ssh -R aldjfa:80:localhost:5000 serveo.net"
+    I'm going to test from the heroku production site to see if votes sent from there are tracked yes/no
+  - re-watched 180
 
 202 - would need to change sendgrid webhook to production heroku webhook if I ever wanted to deploy
 190601 cards read: sent on: Invalid Date
