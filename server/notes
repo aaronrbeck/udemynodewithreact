@@ -10,6 +10,11 @@ I was primarially using the parent folder to track to github
 the server folder has it's own git file - this one is the one that I can use to automatically depoloy to heroku
 by using git push heroku master
 
+to kill a running port:
+https://stackoverflow.com/questions/12397175/how-do-i-close-an-open-port-from-the-terminal-on-the-mac
+sudo lsof -i :portNumber
+kill PID
+
 --In production the create-react-app server does not exist
 --the proxy file inside the react app rewrites requests from 3000 to 5000
 heroku notes:
@@ -323,7 +328,7 @@ section 11 - Front end survey form
 
 
 0
-Secion 12: handling webhook data
+Section 12: handling webhook data
 174 - lecture: webhook: one server communicates with another server because of something that happneed on the first server
 175 - lecture: sendgrid and localtunnel for local development webhooks
 176 - set up local tunnel in start scripts
@@ -400,11 +405,14 @@ where I'm stuck:
 
 
 
-my mongo db recipients array shows false when in my test email I had responded yes to the survey?  am I not reading something correctly?
-200 - same as above, now that I have cards displaying the survey resultsm, it is obviouse that somehow I am not writing y/n votes to my database
+my mongo db recipients array shows false when in my test email 
+I had responded yes to the survey?  am I not reading something correctly?
+200 - same as above, now that I have cards displaying the survey resultsm, 
+it is obviouse that somehow I am not writing y/n votes to my database
   -rewatched 190, 191, 192
   went back to 179 verfied sendgrid setup, 
-  - one possibility may be that sendneed to check if sendgrid is looking at development or production, it can only do one at a time.
+  - one possibility may be that sendneed to check if sendgrid is looking at development or production, 
+  it can only do one at a time.
   so i went  back and rewatched lesson 176 and
     -verified localtunnel dependancy
     pulled out webhook (it might be production web hook, will need to put back in later) 

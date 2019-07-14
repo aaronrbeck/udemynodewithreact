@@ -35,45 +35,53 @@ module.exports = app =>{
     
     
     //lesson 177 set up route for sendgrid tunnel
-    app.post('/api/surveys/webhooks', (req, res) => {
-       //187 refactor
-        const p = new Path('/api/surveys/:surveyId/:choice')
+    // app.post('/api/surveys/webhooks', (req, res) => {
+        //183 re-doing this section
+        // const events = _.map(req.body, (event) =>{
+        //    const pathname = new URL(event.url).pathname
+        //     const p = new Path('/api/surveys:surveyID/:choice')
+        //     console.log(p.test(pathname))
+        // })
+
+
+        //187 refactor
+        // const p = new Path('/api/surveys/:surveyId/:choice')
         //187 refactor using lodash library chain function, chain is an advanted js/lodash topic
-            _.chain(req.body)
-            .map(({ email, url }) =>{
-                const match = p.test(new URL(url).pathname)
-                if (match) {
-                    return { email, surveyId: match.surveyId, choice: match.choice}
-                }
-            })
-            console.log()
-            .compact()
-            .uniqBy('email', 'surveyId')
+            // _.chain(req.body)
+            // .map(({ email, url }) =>{
+            //     const match = p.test(new URL(url).pathname)
+            //     if (match) {
+            //         return { email, surveyId: match.surveyId, choice: match.choice}
+            //     }
+            // })
+            // console.log()
+            // .compact()
+            // .uniqBy('email', 'surveyId')
             //191: destructure event to surveyId, email, choice
-            .each(({ surveyId, email, choice }) =>{
+            // .each(({ surveyId, email, choice }) =>{
 
             //191 even though the following is a promise, sendgrid does all the work, so we don't need to asynch it.  ?
-                Survey.updateOne(
-                {
-                    //191: gotcha: mongo id's start with _:
-                    _id: surveyId,
-                    recipients: {
-                        $elemMatch: { email: email, responded: false }
-                    }
-                },
-                {
-                    $inc: { [choice]: 1 },
-                    $set: { 'recipients.$.responded': true },
+                // Survey.updateOne(
+                // {
+                //     //191: gotcha: mongo id's start with _:
+                //     _id: surveyId,
+                //     recipients: {
+                //         $elemMatch: { email: email, responded: false }
+                //     }
+                // },
+                // {
+                //     $inc: { [choice]: 1 },
+                //     $set: { 'recipients.$.responded': true },
                     //192 add lastResponded:
-                    lastResponded: new Date()
+                    // lastResponded: new Date()
 
                  //191 gotcha:   .exec()
-                }).exec()
+    //             }).exec()
                
-            })
-            .value()
-        res.send({})
-    })
+    //         })
+    //         .value()
+    //     res.send({})
+    // })
 
 
 
